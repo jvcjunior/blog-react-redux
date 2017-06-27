@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/card'
 
 class App extends Component {
+  
   render() {
+    const { container } = style;
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={container}>
+        <Card />
+        <Card />
       </div>
     );
   }
 }
+
+const style = {
+  container: {
+    'listStyle': 'none',
+    'width': '600px',
+    'margin': '0 auto',
+  },
+};
 
 export default App;
